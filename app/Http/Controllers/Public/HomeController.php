@@ -67,7 +67,7 @@ class HomeController extends Controller
 
     public function facilities()
     {
-        $facilities = Facility::where('status', 1)->get();
+        $facilities = Facility::orderBy('name', 'asc')->get();
         return view('pages.facilities', compact('facilities'));
     }
 

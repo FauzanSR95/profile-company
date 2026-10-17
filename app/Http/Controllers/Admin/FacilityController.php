@@ -16,7 +16,7 @@ class FacilityController extends BaseController
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $facilities = Facility::latest()->get();
+            $facilities = Facility::orderBy('name', 'asc')->get();
             return response()->json(['data' => $facilities]);
         }
         return view('admin.facilities.index');
