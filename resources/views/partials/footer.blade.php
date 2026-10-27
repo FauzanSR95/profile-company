@@ -12,23 +12,11 @@
                         </a>
                         <p class="brand-description mb-0">SATUAN PELAYANAN PELATIHAN VOKASI DAN PRODUKTIVITAS PEKANBARU</p>
 
-                        <!-- Bagian Alamat, Telepon, Email dengan jarak yang seragam -->
+                        <!-- Bagian Alamat (Telepon dan Email dihapus) -->
                         <div class="contact-info mt-4 d-flex flex-column gap-2">
                             <div class="d-flex align-items-start gap-2 text-white">
                                 <i class="bi bi-geo-alt flex-shrink-0" style="width: 20px; margin-top: 2px;"></i>
                                 <span>Jl. Terubuk No.4, Wonorejo, Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28125</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2 text-white">
-                                <i class="bi bi-telephone flex-shrink-0" style="width: 20px;"></i>
-                                <a href="tel:082364267742" class="text-white text-decoration-none">
-                                    082364267742
-                                </a>
-                            </div>
-                            <div class="d-flex align-items-center gap-2 text-white">
-                                <i class="bi bi-envelope flex-shrink-0" style="width: 20px;"></i>
-                                <a href="mailto:satpelblkpekanbaru@gmail.com" class="text-white text-decoration-none">
-                                    satpelblkpekanbaru@gmail.com
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -83,8 +71,8 @@
                                             <i class="fas fa-globe text-center" style="width: 18px;"></i>
                                             <span>bpvppekanbaru.kemnaker.go.id</span>
                                         </a>
-                                        <a href="https://bpvppekanbaru.kemnaker.go.id/" class="d-flex align-items-center gap-2 m-0">
-                                            <i class="fas fa-email text-center" style="width: 18px;"></i>
+                                        <a href="mailto:satpelblkpekanbaru@gmail.com" class="d-flex align-items-center gap-2 m-0">
+                                            <i class="fas fa-envelope text-center" style="width: 18px;"></i>
                                             <span>satpelblkpekanbaru@gmail.com</span>
                                         </a>
                                     </nav>

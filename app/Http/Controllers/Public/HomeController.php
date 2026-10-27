@@ -25,7 +25,7 @@ class HomeController extends Controller
         $posts = Post::with(['images', 'categories'])
             ->where('status', PostStatusEnum::PUBLISHED)
             ->latest()
-            ->take(6)
+            ->take(3)
             ->get();
 
         return view('pages.home', compact('totalDepartments', 'totalWorkshops', 'departments', 'posts'));

@@ -62,9 +62,16 @@
     </section>
 
     <section id="departments" class="departments section light-background">
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Info & Pengumuman</h2>
-            <p>Baca informasi terbaru seputar Satpel PVP Pekanbaru.</p>
+        <div class="container section-title news-section-header" data-aos="fade-up">
+            <div class="news-title-group text-center text-md-start">
+                <h2>Info & Pengumuman</h2>
+                <p>Baca informasi terbaru seputar Satpel PVP Pekanbaru.</p>
+            </div>
+            <!-- Tombol versi Desktop (Sembunyi di HP, Muncul di PC) -->
+            <a href="{{ Route::has('public.news') ? route('public.news') : url('/berita') }}" class="btn-see-all-news d-none d-md-inline-flex">
+                <span>Lihat Semua Berita</span>
+                <i class="bi bi-arrow-right"></i>
+            </a>
         </div>
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -104,6 +111,14 @@
                         <p class="mt-3 text-muted">Belum ada artikel yang diterbitkan di kategori ini.</p>
                     </div>
                 @endforelse
+            </div>
+
+            <!-- Tombol versi Mobile (Muncul di HP, Sembunyi di PC) -->
+            <div class="text-center mt-5 d-md-none" data-aos="fade-up" data-aos-delay="200">
+                <a href="{{ Route::has('public.news') ? route('public.news') : url('/berita') }}" class="btn-see-all-news">
+                    <span>Lihat Semua Berita</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -439,6 +454,61 @@
             background: #00237a;
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(0, 21, 76, 0.2);
+        }
+
+        /* Header Section Info & Pengumuman (Konsep 1 Diperbarui) */
+        .news-section-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            padding-bottom: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .news-section-header {
+                flex-direction: row;
+                align-items: center; /* DIUBAH: Membuat tombol sejajar vertikal di tengah */
+                text-align: left !important;
+            }
+
+            .news-section-header h2::before,
+            .news-section-header h2::after {
+                left: 0 !important;
+                right: auto !important;
+                margin: 0 !important;
+            }
+
+            .news-section-header p {
+                margin: 0 !important;
+            }
+        }
+
+        /* Gaya Tombol Ghost Link (Tanpa Kotak Kaku, Lebih Modern) */
+        .btn-see-all-news {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            color: #00154c !important;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none !important;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .btn-see-all-news i {
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-see-all-news:hover {
+            background-color: rgba(0, 21, 76, 0.05); /* Efek sorot latar belakang transparan */
+            color: #0033b5 !important;
+            transform: translateX(4px);
         }
     </style>
 @endpush
